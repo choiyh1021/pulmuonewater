@@ -1,0 +1,525 @@
+@charset 'utf-8';
+@import url('font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'NotoSansKR', sans-serif;
+    line-height: 1;
+}
+
+/* 공통 클래스 */
+.clearfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* 상단영역 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 192rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+}
+
+.header .container {}
+
+.header-left {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 1.6rem 0;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    margin: 0 1.5rem;
+}
+
+.logo img {
+    position: relative;
+    display: block;
+}
+
+.header-menu-list {
+    position: relative;
+    display: inline-block;
+}
+
+.header-menu-list>li {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.header-menu-list>li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: block;
+    width: 0.2rem;
+    height: 1.1rem;
+    background-color: #aaaaab;
+}
+
+.header-menu-list>li:last-child::after {
+    display: none;
+}
+
+.header-menu-list>li>a {
+    position: relative;
+    display: block;
+    padding: 1.5rem 6rem;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.header-right {
+    position: absolute;
+    top: 0;
+    right: -8.5rem;
+    display: block;
+    width: 8.5rem;
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+.header-right a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: #222;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    display: block;
+    width: 192rem;
+    height: 70.8rem;
+    background: #92c83e url('../images/visual.jpg') no-repeat;
+    margin: 0 auto;
+}
+
+.visual-img {
+    position: relative;
+    display: block;
+    padding: 20rem 0;
+}
+
+/* 재활용 영역 */
+.recycle {
+    position: relative;
+    display: block;
+    padding: 5rem 0;
+}
+
+.recycle-list {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 0 14rem;
+}
+
+.recycle-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.recycle-img {
+    position: relative;
+    display: block;
+    height: 11.4rem;
+}
+
+.recycle-list p {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #617c05;
+    line-height: 1.5;
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.recycle-list span {
+    position: relative;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #505050;
+    line-height: 1.7;
+}
+
+/* 제품 영역 */
+.product {
+    position: relative;
+    display: block;
+}
+
+.product .container {
+    border-top: 0.1rem solid #d3d3d3;
+    padding: 8rem 0;
+}
+
+.product-list {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.product-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 24rem;
+    margin-right: 7rem;
+}
+
+.product-list>li:last-child {
+    margin-right: 0;
+}
+
+.product-list p {
+    font-size: 1.7rem;
+    color: #000;
+    line-height: 1;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-list span {
+    font-size: 1.4rem;
+    color: #6d6d6d;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.watermark {
+    position: relative;
+    display: block;
+    padding: 7rem 0;
+    text-align: center;
+}
+
+.product-list-2 {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.product-list-2>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.product-list-2>li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    display: block;
+    width: 0.1rem;
+    height: 3.8rem;
+    background-color: #bbbdc2;
+}
+
+.product-list-2>li:first-child::before {
+    display: none;
+}
+
+.product-list-2 .product-img {
+    position: relative;
+    display: block;
+    height: 7.2rem;
+}
+
+.product-list-2 img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.product-list-2 p {
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 1;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-list-2 span {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 배너 영역 */
+.banner {
+    position: relative;
+    display: block;
+    max-width: 240rem;
+    height: 25rem;
+    background: url('../images/banner.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* FAQ 영역 */
+.faq {
+    position: relative;
+    display: block;
+    padding-top: 3rem;
+    padding-bottom: 13rem;
+}
+
+.faq-list {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.faq-list li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.faq-list .faq-bar {
+    border-top: 0.1rem solid #bababa;
+    width: 7.6rem;
+    margin: 0 auto;
+}
+
+.faq-list img {
+    margin-bottom: 1.5rem;
+}
+
+.faq-list p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 1;
+    margin-top: 1.5rem;
+}
+
+/* 하단 영역 */
+.footer {
+    position: relative;
+    display: block;
+    border-top: 0.1rem solid #f2f2f2;
+    padding: 4rem 0;
+}
+
+.footer-list {
+    position: relative;
+    display: block;
+    width: 22rem;
+    margin: 0 auto;
+}
+
+.footer-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    padding-right: 1.5rem;
+}
+
+.footer-list>li:last-child {
+    padding-right: 0;
+}
+
+.familysite {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 26rem;
+    font-size: 1.8rem;
+    color: #666;
+    border: 0.1rem solid #000;
+    background-color: #fff;
+    text-align: left;
+    padding: 1rem 1.5rem;
+}
+
+.familysite::after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url('../images/footer_icon.png') no-repeat;
+}
+
+.notice {
+    position: relative;
+    display: block;
+    width: 38rem;
+    margin: 0 auto;
+}
+
+.notice>li {
+    position: relative;
+    display: block;
+    margin-top: 2.5rem;
+    float: left;
+}
+
+.notice>li:last-child {
+    padding-right: 0;
+}
+
+.notice>li::after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 0.1rem;
+    height: 1rem;
+    background-color: #b0b0b0;
+    margin: 0 1.5rem;
+}
+
+.notice>li:last-child::after {
+    display: none;
+}
+
+.notice>li>a {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: -0.07rem;
+}
+
+.notice>li>a strong {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+    letter-spacing: -0.07rem;
+}
+
+.qna {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+}
+
+.qna>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    border-right: 0.1rem solid #ccc;
+}
+
+.qna>li:last-child {
+    border-right: 0;
+}
+
+.qna-tit {
+    position: relative;
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.qna a {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.qna-txt {
+    position: relative;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+.address-list {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.address-list>li {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #7b7b7b;
+}
+
+.mt-10 {
+    margin-top: 1rem;
+}
